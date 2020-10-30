@@ -769,6 +769,17 @@ func Convert_v1alpha2_CommonProjectSource_To_v1alpha1_CommonProjectSource(in *v1
 	return autoConvert_v1alpha2_CommonProjectSource_To_v1alpha1_CommonProjectSource(in, out, s)
 }
 
+func autoConvert_v1alpha1_Component_To_v1alpha2_Component(in *Component, out *v1alpha2.Component, s conversion.Scope) error {
+	// WARNING: in.ComponentType requires manual conversion: does not exist in peer-type
+	// WARNING: in.Container requires manual conversion: does not exist in peer-type
+	// WARNING: in.Volume requires manual conversion: does not exist in peer-type
+	// WARNING: in.Plugin requires manual conversion: does not exist in peer-type
+	// WARNING: in.Kubernetes requires manual conversion: does not exist in peer-type
+	// WARNING: in.Openshift requires manual conversion: does not exist in peer-type
+	// WARNING: in.Custom requires manual conversion: does not exist in peer-type
+	return nil
+}
+
 func autoConvert_v1alpha2_Component_To_v1alpha1_Component(in *v1alpha2.Component, out *Component, s conversion.Scope) error {
 	// WARNING: in.Name requires manual conversion: does not exist in peer-type
 	// WARNING: in.ComponentUnion requires manual conversion: does not exist in peer-type
