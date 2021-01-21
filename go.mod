@@ -10,6 +10,7 @@ require (
 	github.com/mitchellh/reflectwalk v1.0.1
 	github.com/santhosh-tekuri/jsonschema v1.2.4
 	github.com/stretchr/testify v1.4.0
+	gopkg.in/yaml.v2 v2.3.0
 	k8s.io/api v0.18.6
 	k8s.io/apiextensions-apiserver v0.18.6
 	k8s.io/apimachinery v0.18.6

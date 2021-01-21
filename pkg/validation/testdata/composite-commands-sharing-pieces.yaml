@@ -1,0 +1,19 @@
+name: "Test detection of self-references"
+
+commands:
+  - id: basic-exec
+    exec:
+      component: "test-component-1"
+  - id: composite-1
+    composite:
+      commands: ["composite-a", "composite-b"]
+  - id: composite-a
+    composite:
+      commands: ["basic-exec"]
+  - id: composite-b
+    composite:
+      commands: ["composite-a"]
+  
+components:
+  - name: test-component-1
+    container: {}

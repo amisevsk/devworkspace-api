@@ -1,0 +1,21 @@
+name: "Two composite commands reference the same exec command"
+
+commands:
+  - id: basic-exec
+    exec:
+      component: "test-component-1"
+  - id: composite1
+    composite:
+      commands: ["composite2", "basic-exec"]
+  - id: composite2
+    composite:
+      commands: ["composite3"]
+  - id: composite3
+    composite:
+      commands: ["composite1"]
+  
+components:
+  - name: test-component-1
+    container: {}
+
+errRegexp: ".*composite command cannot indirectly reference itself"
